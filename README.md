@@ -14,13 +14,13 @@ If you want to change this configuration, you have to modify Dockerfile and buil
 To manage easily the containers, you have to choose a specific name and port by container !
 
 ```bash
-docker run -d --rm --net sparkCluster -p 8082:8081 -v $PWD/app:/app --name slave2 -h slave2 swal4u/spark-slave:v2.3.0.1
+docker run -d --rm --net sparkCluster -p 8082:8081 -v $PWD/app:/app --name slave2 -h slave2 swal4u/spark-slave:v2.4.2.1
 ```
 
 I choose to add a function in my .bash_profile (OSX).
 
 ```bash
-function slave-start () { docker run -d --rm --net sparkCluster -p "$2":8081 -v $PWD/app:/app --name "$1" -h "$1" swal4u/spark-slave:v2.3.0.1 ; }
+function slave-start () { docker run -d --rm --net sparkCluster -p "$2":8081 -v $PWD/app:/app --name "$1" -h "$1" swal4u/spark-slave:v2.4.2.1 ; }
 ```
 
 ## Stop the containers

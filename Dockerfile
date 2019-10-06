@@ -1,8 +1,8 @@
 FROM openjdk:8
 
 LABEL maintainer="Stéphane Walter <stephane.walter@me.com>"
-LABEL REFRESHED_AT="2019-07-26"
-LABEL version="SPARK 2.3"
+LABEL REFRESHED_AT="2019-10-06"
+LABEL version="SPARK 2.4.2"
 
 # We will be running our Spark jobs as `root` user.
 USER root
@@ -13,7 +13,7 @@ WORKDIR /root/
 
 
 # Spark related variables.
-ARG SPARK_VERSION=2.3.0
+ARG SPARK_VERSION=2.4.2
 ARG SPARK_BINARY_ARCHIVE_NAME=spark-${SPARK_VERSION}-bin-hadoop2.7
 ARG SPARK_BINARY_DOWNLOAD_URL=https://archive.apache.org/dist/spark/spark-${SPARK_VERSION}/${SPARK_BINARY_ARCHIVE_NAME}.tgz
 
